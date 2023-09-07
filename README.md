@@ -1,66 +1,47 @@
-# MacMetadataLocation_mov_to_img
-Copies location metadata from mov to img
+# GUI Program for Embedding Metadata and Modifying Dates
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Metadata Embedding Script</title>
-</head>
-<body>
+This GUI program allows you to embed metadata from an input file (video or image) and modify the creation and modified dates of the output file(s). The program provides a simple user interface to select the input file and choose either a folder to process multiple files or a single output file.
 
-<h1>Metadata Embedding Script</h1>
+![Embedded Modified Date](Modified_Date.png)
 
-<p>This script allows you to embed metadata from a video file into a photo file using exiftool on macOS.</p>
+## How It Works
+
+1. **Select the Input File:** Click the "Select Input File" button to choose the input file. The input file can be a video (e.g., .mp4, .mov, .avi) or an image (e.g., .jpg, .png, .gif).
+
+2. **Select the Output Folder or File:** Click the "Select Output" button to specify the output location. You can either choose a folder to process multiple files in batch mode or select a single output file.
+
+3. **Embed Metadata and Modify Dates:** When you've chosen the input file and output location, click the "Embed Metadata & Modify Dates" button to execute the program. Metadata from the input file, including the "Modified Date," will be embedded into the output file(s). The creation and modified dates of the output file(s) will be updated to match the input file.
 
 ## Dependencies
 
-- [exiftool](https://exiftool.org/) - A command-line tool for reading and writing metadata in various file formats.
+To run this program on macOS, you need to install the following dependencies:
 
-## Installation
+- [ExifTool](https://exiftool.org/): ExifTool is used to copy metadata from the input file to the output file. You can install it using [Homebrew](https://brew.sh/):
 
-1. **Install exiftool:** If you haven't already, you can install exiftool via Homebrew:
-
-    ```bash
+    ```shell
     brew install exiftool
     ```
 
-## Usage
+## Running the Program
 
-1. **Clone the repository:**
+1. Clone or download this repository to your local machine.
 
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
+2. Install the required dependencies (ExifTool) as mentioned above.
+
+3. Open a terminal and navigate to the project directory.
+
+4. Run the program by executing the following command:
+
+    ```shell
+    python gui_program.py
     ```
 
-2. **Run the script:**
+5. The GUI will open, allowing you to select the input file and choose the output folder or file. Follow the on-screen instructions to embed metadata and modify dates.
 
-    Replace `"input_video.MOV"` and `"input_photo.jpg"` with the actual paths to your video and photo files.
+## Author
 
-    ```bash
-    python embed_metadata.py
-    ```
+- Your Name
 
-3. **Check the result:**
+## License
 
-    The script will embed metadata from the video into the photo. You can check the photo file to see the changes.
-
-## Example
-
-Here's a sample usage of the script:
-
-```python
-import subprocess
-
-def embed_metadata(video_path, photo_path):
-    try:
-        subprocess.run(["exiftool", "-overwrite_original", "-TagsFromFile", video_path, photo_path])
-        print("Metadata embedded successfully.")
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
-
-if __name__ == "__main__":
-    input_video = "input_video.MOV"
-    input_photo = "input_photo.jpg"
-
-    embed_metadata(input_video, input_photo)
+This project is licensed under the [MIT License](LICENSE).
