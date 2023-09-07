@@ -31,9 +31,12 @@ To run this program on macOS, you need to install the following dependencies:
 3. Open a terminal and navigate to the project directory.
 
 4. Run the program by executing the following command:
+    ```shell
+    cd "drag and drop the file path here, forexample the downloads folder, hit enter"
+    ```
 
     ```shell
-    python gui_program.py
+    python LocationAndCreationDate_Embedder macOS_GUI.py
     ```
 
 5. The GUI will open, allowing you to select the input file and choose the output folder or file. Follow the on-screen instructions to embed metadata and modify dates.
