@@ -1,8 +1,8 @@
 # GUI Program for Embedding Metadata and Modifying Dates
 
-This GUI program allows you to embed metadata from an input file (video or image) and modify the creation and modified dates of the output file(s). The program provides a simple user interface to select the input file and choose either a folder to process multiple files or a single output file.
+This GUI program allows you to embed metadata like location data from an input file (video or image) and modify the creation and modified dates of the output file(s). The program provides a simple user interface to select the input file and choose either a folder to process multiple files or a single output file.
 
-![Embedded Modified Date](Modified_Date.png)
+![Embedded Modified Date](Modified%20Date.png)
 
 ## How It Works
 
