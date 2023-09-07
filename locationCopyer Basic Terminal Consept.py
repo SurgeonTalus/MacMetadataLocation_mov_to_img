@@ -1,5 +1,4 @@
 import subprocess
-
 def embed_metadata(video_path, photo_path):
     try:
         # Use exiftool to copy metadata from video to photo
